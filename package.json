@@ -2,9 +2,12 @@
   "name": "mean-stack",
   "version": "1.0.0",
   "description": "a full stack project of login in nodejs",
-  "main": "index.js",
+  "main": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx --watch backend/server.ts",
+    "build": "tsup backend/server.ts --format esm --dts --minify", 
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
